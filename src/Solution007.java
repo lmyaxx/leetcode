@@ -1,4 +1,4 @@
-public class Solution7 {
+public class Solution007 {
     public int reverse(int x) {
         int result=0;
         while(x!=0){

@@ -1,6 +1,6 @@
 import org.junit.Test;
 
-public class Solution8 {
+public class Solution008 {
     @Test
     public void test1(){
         System.out.println(myAtoi("2147483648"));
