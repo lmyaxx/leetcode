@@ -2,10 +2,6 @@ import org.junit.Test;
 
 public class Solution010 {
 
-    @Test
-    public void test1(){
-        System.out.println(isMatch("aaa","ab*a*c*a"));
-    }
     public boolean isMatch(String s, String p) {
         int slen = s.length(),plen=p.length();
         //dp[i][j]，i表示s取长，j表示p取长
@@ -44,5 +40,17 @@ public class Solution010 {
             }
         }
         return dp[slen][plen];
+    }
+
+    public boolean isMatch1(String s,String p){
+        if(p.isEmpty()) return s.isEmpty();
+        //关键信息是处理'*'，所以将其单独处理
+        if(p.length()>1&& p.charAt(1)=='*'){
+            //形如 ？*的与字符相匹配，当*取0时，其消除'?*'判断是否匹配即可，当*非0时，则判断消除s字符上的符合的字符直至*取0
+            return isMatch1(s,p.substring(2))||(!s.isEmpty()&&(p.charAt(0)=='.'||p.charAt(0)==s.charAt(0))&&isMatch1(s.substring(1),p));
+        }else{
+            //此时知道p的长度为1，而s的长度未知
+            return !s.isEmpty()&&(s.charAt(0)==p.charAt(0)||p.charAt(0)=='.')&&isMatch1(s.substring(1),p.substring(1));
+        }
     }
 }

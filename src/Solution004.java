@@ -36,3 +36,4 @@ public class Solution004 {
         return -1;
     }
 }
+
