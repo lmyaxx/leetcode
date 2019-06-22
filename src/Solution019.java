@@ -26,4 +26,19 @@ public class Solution019 {
         front.next=front.next.next;
         return rawHead;
     }
+    public ListNode removeNthFromEnd1(ListNode head, int n) {
+        if(n==0)
+            return head;
+        ListNode pre = head,next=head;
+        for(int i=0;i<n;i++){
+            next=next.next;
+        }
+        if(next == null) return pre.next;
+        while(next.next!=null){
+            next = next.next;
+            pre = pre.next;
+        }
+        pre.next=pre.next.next;
+        return head;
+    }
 }
