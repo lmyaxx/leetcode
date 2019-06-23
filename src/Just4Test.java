@@ -1,5 +1,11 @@
 import org.junit.Test;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Stack;
+
 public class Just4Test {
     @Test
     public void test_over_limit(){
@@ -34,4 +40,20 @@ public class Just4Test {
         int n = 964632435*10 + 1;
         System.out.println(n);
     }
+
+    @Test
+    public void test_construct_new_Array(){
+        List<Integer> li = Arrays.asList(1,2,3);
+        String strs[] = new String[10];
+        System.out.println(li);
+        System.out.println(Arrays.asList(li));
+    }
+
+    @Test
+    public void test_empty_Stack(){
+        Stack<Character> stack = new Stack<>();
+//        char s = stack.;
+//        System.out.println(s);
+    }
+
 }
