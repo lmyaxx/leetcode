@@ -1,26 +1,19 @@
 public class Solution021 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        if(l1==null) return l2;
-        if(l2==null) return l1;
-        ListNode head,cur,cur1=l1,cur2=l2;
-        if(l1.val>l2.val){
-            cur=head=l2;
-            cur2=cur2.next;
-        }else{
-            cur=head = l1;
-            cur1=cur1.next;
-        }
+        ListNode pre = new ListNode(-1);
+        ListNode cur = pre;
         while(l1!=null&&l2!=null){
-            if(cur1.val>cur2.val){
-                cur = cur.next = cur2;
-                cur2 = cur2.next;
+            if(l1.val>l2.val){
+                cur = cur.next = l2;
+                l2 = l2.next;
             }else{
-                cur= cur.next = cur1;
-                cur1 = cur1.next;
+                cur = cur.next = l1;
+                l1 = l1.next;
             }
         }
-        cur.next = l1==null? cur2:cur1;
-        return head;
+        if(l1==null) cur.next=l2;
+        if(l2==null) cur.next=l1;
+        return pre.next;
     }
     //递归出奇迹
     public ListNode mergeTwoLists1(ListNode l1, ListNode l2) {
