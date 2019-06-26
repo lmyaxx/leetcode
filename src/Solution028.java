@@ -40,9 +40,10 @@ public class Solution028 {
         i=5   ababaca      i=5  ababaca        i=5  ababaca
         k=2     ababaca    k=0      ababaca    k=-1      ababaca
                            next[2]             next[0]
-                           
+
         为什么下一个next的index是next[k]的值？
         对于pattern[:k+1],必定pattern[:next[k]+1] = pattern[-(next[k]+1):]
+        而对于target,也必然是target[i-(k+1):i] = pattern[:k+1] ，其中
         若pattern[-(next[k]+1):]的下一个字符不匹配，
         则尝试匹配pattern[:next[k]+1]的下一个字符。
         要使pattern[:k+1] = pattern[:next[k]+1] ，所以k=next[k]
