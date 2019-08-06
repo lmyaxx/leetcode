@@ -8,7 +8,6 @@ public class Solution102 {
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         List<List<Integer>> result=new ArrayList<>();
         if(root==null) return result;
-        int count=1;
         queue.offer(root);
         while(!queue.isEmpty()){
             int size = queue.size();
