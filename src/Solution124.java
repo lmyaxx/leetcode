@@ -1,26 +1,16 @@
 public class Solution124 {
-    int result = Integer.MIN_VALUE;
+    int max = Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
         helper(root);
-        return result;
+        return max;
     }
-    private int helper(TreeNode root){
-        int left=0,right=0;
-        if(root.left!=null)
-            left = helper(root.left);
-        if(root.right!=null)
-            right = helper(root.right);
-        int temp=root.val;
-        int withoutParent = root.val;
-        if(left>0) withoutParent+=left;
-        if(right>0) withoutParent+=right;
-        result = Math.max(withoutParent,result);
-        int max= Math.max(left,right);
-        if(root.val+max>0){
-            if(max<0)
-                return root.val;
-            else return root.val+max;
+    private int helper(TreeNode root) {
+        if(root == null){
+            return 0;
         }
-        return 0;
+        int left = Math.max(0,helper(root.left));
+        int right = Math.max(0, helper(root.right));
+        max = Math.max(max, left + right + root.val);
+        return Math.max(left + root.val, right + root.val);
     }
 }
