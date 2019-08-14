@@ -21,7 +21,7 @@ public class Solution138 {
     public Node copyRandomList1(Node head){
         if(head==null) return head;
         Node iter = head,cur=null;
-//        
+//
         while(iter!=null){
             iter.next = new Node(iter.val,iter.next,null);
             iter = iter.next.next;
