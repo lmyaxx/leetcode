@@ -1,3 +1,5 @@
+import Common.TreeNode;
+
 public class Solution110 {
     public boolean isBalanced(TreeNode root) {
         return helper(root)!=-1;

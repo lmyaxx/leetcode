@@ -1,3 +1,5 @@
+import Common.Node;
+
 public class Solution116 {
     public Node connect(Node root) {
         if(root==null) return root;

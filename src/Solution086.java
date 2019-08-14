@@ -1,3 +1,5 @@
+import Common.ListNode;
+
 public class Solution086 {
     public ListNode partition(ListNode head, int x) {
         if(head==null) return head;

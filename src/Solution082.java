@@ -1,3 +1,5 @@
+import Common.ListNode;
+
 public class Solution082 {
     public ListNode deleteDuplicates(ListNode head) {
 //        1->2->3->3->4->4->5

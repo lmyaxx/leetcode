@@ -1,3 +1,5 @@
+import Common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +9,7 @@ public class Solution094 {
         helper(root,res);
         return res;
     }
-    private void helper(TreeNode node,List<Integer> res){
+    private void helper(TreeNode node, List<Integer> res){
         if(node==null) return;
         helper(node.left,res);
         res.add(node.val);

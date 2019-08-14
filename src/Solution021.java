@@ -1,3 +1,5 @@
+import Common.ListNode;
+
 public class Solution021 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode pre = new ListNode(-1);

@@ -1,3 +1,5 @@
+import Common.TreeNode;
+
 public class Solution099 {
     public void recoverTree(TreeNode root) {
         TreeNode pre = new TreeNode(0);

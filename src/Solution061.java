@@ -1,3 +1,5 @@
+import Common.ListNode;
+
 import java.util.List;
 
 public class Solution061 {

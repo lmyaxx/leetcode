@@ -1,3 +1,5 @@
+import Common.TreeNode;
+
 public class Solution106 {
     public TreeNode buildTree(int[] inorder, int[] postorder) {
         return helper(inorder,postorder,inorder.length-1,postorder.length-1,inorder.length);

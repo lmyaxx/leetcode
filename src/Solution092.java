@@ -1,3 +1,5 @@
+import Common.ListNode;
+
 import java.awt.*;
 
 public class Solution092 {

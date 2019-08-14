@@ -1,3 +1,5 @@
+import Common.TreeNode;
+
 public class Solution101 {
     public boolean isSymmetric(TreeNode root) {
         if(root==null) return true;

@@ -1,3 +1,5 @@
+import Common.TreeNode;
+
 public class Solution124 {
     int max = Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {

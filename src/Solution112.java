@@ -1,3 +1,5 @@
+import Common.TreeNode;
+
 public class Solution112 {
     boolean res = false;
     public boolean hasPathSum(TreeNode root, int sum) {

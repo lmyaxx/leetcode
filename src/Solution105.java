@@ -1,3 +1,5 @@
+import Common.TreeNode;
+
 import java.util.Arrays;
 
 public class Solution105 {

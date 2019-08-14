@@ -1,3 +1,5 @@
+import Common.TreeNode;
+
 import java.awt.*;
 
 public class Solution114 {

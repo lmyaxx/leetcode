@@ -1,3 +1,5 @@
+import Common.TreeNode;
+
 public class Solution111 {
     int res = Integer.MAX_VALUE;
     public int minDepth(TreeNode root) {

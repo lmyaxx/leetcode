@@ -1,3 +1,5 @@
+import Common.TreeNode;
+
 public class Solution104 {
     public int maxDepth(TreeNode root) {
         if(root==null) return 0;
