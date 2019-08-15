@@ -4,7 +4,7 @@ import javax.jws.Oneway;
 import java.lang.reflect.Array;
 import java.util.*;
 
-public class Just4Test {
+public class ZJust4Test {
     @Test
     public void test_over_limit(){
         int m = -2147483648;
@@ -202,5 +202,23 @@ public class Just4Test {
     public void test_Solution127(){
         Solution127 res = new Solution127();
         res.ladderLength("hit","cog",Arrays.asList(new String []{"hot","dot","dog","lot","log","cog"}));
+    }
+
+    @Test
+    public void test_beginWith(){
+        String s = "12345678";
+        System.out.println(s.startsWith("234",1));
+    }
+
+    @Test
+    public void test_Solution140(){
+        Solution140 res = new Solution140();
+        String s= "aaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        List<String> dict = Arrays.asList(new String[]{"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"});
+//        res.wordBreak(s,dict);
+        Date date =new Date();
+        res.wordBreak1(s,dict);
+        System.out.print(new Date().getTime()-date.getTime());
+
     }
 }

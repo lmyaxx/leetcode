@@ -26,32 +26,34 @@ public class Solution140 {
         map.put(s, res);
         return res;
     }
-
-    public List<String> wordBreak(String s, List<String> wordDict) {
-        Set<Integer> steps = new TreeSet<>();
-        for(String word:wordDict){
-            steps.add(word.length());
-        }
-        Set<String> set = new HashSet<>(wordDict);
-        Map<Integer,List<String>> memo = new HashMap<>();
-        for(int i=0,len=s.length();i<len;i++){
-            List<String> level = new LinkedList<>();
-            String cur = s.substring(0,i+1);
-            if(set.contains(cur)){
-                level.add(cur);
-            }
-            for(Integer step:steps){
-                if(i+1-step<1) break;
-                if(memo.get(i-step).isEmpty()) continue;
-                cur = s.substring(i+1-step,i+1);
-                if(!set.contains(cur)) continue;
-                for(String sss: memo.get(i-step)){
-                    level.add(sss+" "+cur);
-                }
-
-            }
-            memo.put(i,level);
-        }
-        return memo.get(s.length()-1);
-    }
+//  this method will encounter the LTE cases
+//    public List<String> wordBreak(String s, List<String> wordDict) {
+//        Set<Integer> steps = new TreeSet<>();
+//        for(String word:wordDict){
+//            steps.add(word.length());
+//        }
+//        Set<String> set = new HashSet<>(wordDict);
+//        Map<Integer,List<String>> memo = new HashMap<>();
+//        for(int i=0,len=s.length();i<len;i++){
+//            System.out.println(i);
+//            List<String> level = new LinkedList<>();
+//            String cur = s.substring(0,i+1);
+//            if(set.contains(cur)){
+//                level.add(cur);
+//            }
+//            for(Integer step:steps){
+//                if(i+1-step<1) break;
+//                List<String> list =  memo.get(i-step);
+//                if(list.isEmpty()) continue;
+//                cur = s.substring(i+1-step,i+1);
+//                if(!set.contains(cur)) continue;
+//                for(String sss: list){
+//                    level.add(sss+" "+cur);
+//                }
+//
+//            }
+//            memo.put(i,level);
+//        }
+//        return memo.get(s.length()-1);
+//    }
 }
