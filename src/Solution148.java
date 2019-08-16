@@ -3,7 +3,7 @@ import Common.ListNode;
 import java.util.List;
 
 public class Solution148 {
-    //mergeSort
+    //mergeSort  not recurcive
     public ListNode sortList(ListNode head) {
         ListNode res = new ListNode(-1);
         res.next=head;
