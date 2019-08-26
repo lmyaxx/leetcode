@@ -11,6 +11,10 @@ public class Trie {
         root = new TrieNode();
     }
 
+    public TrieNode getRoot(){
+        return root;
+    }
+
     /** Inserts a word into the trie. */
     public void insert(String word) {
        TrieNode cur = root;
