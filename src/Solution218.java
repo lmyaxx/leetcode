@@ -34,6 +34,7 @@ public class Solution218 {
             heights.add(new int[]{b[1],b[2]}); // use positive number to store the end
         }
         Collections.sort(heights,(a,b)->a[0]==b[0]?a[1]-b[1]:a[0]-b[0]);  // make the begin and end in order
+        //可以利用treeMap<Integer,Integer> map来代替PriorityQueue（堆查找，堆删除耗时）,
         PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->(b-a));  // big bottom heap
         pq.add(0);
         int preMax = 0;
