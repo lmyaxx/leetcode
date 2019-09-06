@@ -17,6 +17,7 @@ public class Solution234 {
         }
         //reverse
         ListNode newHead = reverse(halfHead);
+        halfHead = newHead;
         while(newHead!=null){
             if(newHead.val!=head.val)
                 return false;
