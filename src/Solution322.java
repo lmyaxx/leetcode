@@ -22,4 +22,7 @@ public class Solution322 {
         }
         return result[amount] - 1;
     }
+    public int coinChange1(int[] coins, int amount) {
+        return 0;
+    }
 }
