@@ -10,8 +10,6 @@ import java.util.*;
 public class Solution621 {
     public int leastInterval(char[] tasks, int n) {
         int[] count  = new int[26];
-        int total = tasks.length;
-        int res = 0 ;
         for(char ch:tasks){
             count[ch-'A'] ++;
         }
