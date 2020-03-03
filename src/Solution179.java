@@ -15,7 +15,9 @@ public class Solution179 {
                 return reverse.compareTo(normal);
             }
         });
-        if(strs.length>0&&strs[0].equals("0")) return "0";
+        if(strs.length>0&&strs[0].equals("0")) {
+            return "0";
+        }
         StringBuilder sb = new StringBuilder();
         for(String s:strs){
             sb.append(s);

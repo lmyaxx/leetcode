@@ -1,5 +1,4 @@
 import Common.TreeNode;
-import sun.reflect.generics.tree.Tree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +11,9 @@ public class Solution113 {
     }
 
     private void helper(TreeNode root,List<Integer> out,List<List<Integer>>res,int sum,int cul){
-        if(root==null) return;
+        if(root==null) {
+            return;
+        }
         out.add(root.val);
         cul+=root.val;
         if(root.left==null&&root.right==null&&cul==sum){

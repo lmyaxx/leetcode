@@ -1,3 +1,4 @@
+```mysql
 CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
   BEGIN
     DECLARE M INT;
@@ -6,3 +7,4 @@ CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
       select distinct salary from Employee order by salary desc limit M,1
     );
   END
+```
