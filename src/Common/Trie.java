@@ -33,7 +33,9 @@ public class Trie {
         TrieNode cur = root;
         for(int i=0;i<word.length();i++){
             char ch = word.charAt(i);
-            if(cur.children[ch-'a']==null) return false;
+            if(cur.children[ch-'a']==null) {
+                return false;
+            }
             cur = cur.children[ch-'a'];
         }
         return cur.isWord;
@@ -44,7 +46,9 @@ public class Trie {
         TrieNode cur = root;
         for(int i=0;i<prefix.length();i++){
             char ch = prefix.charAt(i);
-            if(cur.children[ch-'a']==null) return false;
+            if(cur.children[ch-'a']==null) {
+                return false;
+            }
             cur = cur.children[ch-'a'];
         }
         return true;
