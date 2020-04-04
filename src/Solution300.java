@@ -30,8 +30,9 @@ public class Solution300 {
                 }
             }
             size[j]=num;
-            if(j==result)
+            if(j==result) {
                 result++;
+            }
         }
         return result;
     }
