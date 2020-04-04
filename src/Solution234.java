@@ -8,8 +8,9 @@ public class Solution234 {
             cur=cur.next;
             len++;
         }
-        if(len<2)
+        if(len<2) {
             return true;
+        }
         int half = (len+1)/2;
         ListNode halfHead = head;
         for(int i= 0;i<half;i++){
