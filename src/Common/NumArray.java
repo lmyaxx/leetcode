@@ -7,6 +7,7 @@ package Common;
  */
 public class NumArray {
 
+
     private long[] pre;
 
     public NumArray(int[] nums) {

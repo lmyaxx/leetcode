@@ -7,6 +7,7 @@ import org.junit.Test;
  * @Version 1.0
  */
 public class Solution303 {
+
     @Test
     public void test_Solution(){
         int[] nums = new int[]{1,2,3,5,7,3,-2};
