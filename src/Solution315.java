@@ -21,14 +21,14 @@ public class Solution315 {
         return res;
     }
 
-    private void mergeSort(int[] nums,int[] indexs,int start,int end,int [] res){
+    private void mergeSort(int[] nums,int[] indexes,int start,int end,int [] res){
         if(end<=start){
             return;
         }
         int mid = (start + end) / 2;
-        mergeSort(nums, indexs, start, mid,res);
-        mergeSort(nums, indexs, mid+1, end,res);
-        merge(nums,indexs,start,mid,mid+1,end, res);
+        mergeSort(nums, indexes, start, mid,res);
+        mergeSort(nums, indexes, mid+1, end,res);
+        merge(nums,indexes,start,mid,mid+1,end, res);
     }
 
     private void merge(int[] nums,int[] indexes,int leftStart,int leftEnd,int rightStart,int rightEnd,int[] res){
