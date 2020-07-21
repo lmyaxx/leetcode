@@ -29,4 +29,38 @@ public class Solution095 {
         }
         return res;
     }
+    public List<TreeNode> generateTrees1(int n) {
+        if(n<1){
+            return new ArrayList<TreeNode>();
+        }
+        return helper(1,n);
+    }
+
+    private List<TreeNode> helper(int start, int end){
+        List<TreeNode> res = new ArrayList<TreeNode>();
+        if(start>end){
+            res.add(null);
+        }
+        for(int i=start;i<=end;i++){
+            List<TreeNode> left = helper(start,i-1);
+            List<TreeNode> right = helper(i+1,end);
+            int finalI = i;
+            left.forEach((TreeNode former)->{
+                right.forEach((TreeNode latter)->{
+                    res.add(new TreeNode(finalI,deepCopy(former),deepCopy(latter)));
+                });
+            });
+        }
+        return res;
+    }
+
+    private TreeNode deepCopy(TreeNode root){
+        if(root==null){
+            return null;
+        }
+        TreeNode nRoot = new TreeNode(root.val);
+        nRoot.left = deepCopy(root.left);
+        nRoot.right = deepCopy(root.right);
+        return nRoot;
+    }
 }
