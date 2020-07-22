@@ -28,4 +28,57 @@ public class Solution097 {
         }
         return judge[s1.length()][s2.length()];
     }
+
+    public boolean isInterleave1(String s1, String s2, String s3) {
+        char[] sb1 = s1.toCharArray();
+        char[] sb2 = s2.toCharArray();
+        char[] sb3 = s3.toCharArray();
+        int[] count = new int[26];
+        for(char ch: sb1){
+            count[ch-'a']++;
+        }
+        for(char ch:sb2){
+            count[ch-'a']++;
+        }
+        for(char ch:sb3){
+            count[ch-'a']--;
+        }
+        for(int c:count){
+            if(c!=0){
+                return false;
+            }
+        }
+        int[][] memo = new int[sb1.length+1][sb2.length+1];
+        return helper(sb1,sb2,sb3,0,0,0,memo);
+    }
+
+    private boolean helper(char[] sb1,char[] sb2,char[] sb3, int i, int j, int k,int[][] memo){
+        if(memo[i][j]!=0){
+            return memo[i][j] == 1;
+        }
+        while(i>=sb1.length||j>=sb2.length||sb1[i]!=sb2[j]){
+            if(i<sb1.length&&sb1[i]==sb3[k]){
+                i++;k++;
+            }else if(j<sb2.length&&sb2[j] == sb3[k]){
+                j++;k++;
+            }else{
+                if(k == sb3.length){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        }
+        if(sb1[i]!=sb3[k]){
+            memo[i][j]=-1;
+            return false;
+        }
+        if(helper(sb1,sb2,sb3, i+1, j, k+1,memo)){
+            memo[i+1][j] = 1;
+            return true;
+        }else{
+            memo[i+1][j] = -1;
+        }
+        return  helper(sb1,sb2,sb3, i+1, j, k+1,memo)|| helper(sb1,sb2,sb3, i, j+1, k+1,memo);
+    }
 }
