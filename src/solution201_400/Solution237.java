@@ -1,0 +1,14 @@
+package solution201_400;
+
+import Common.ListNode;
+
+public class Solution237 {
+    public void deleteNode(ListNode node) {
+        while(node.next.next!=null){
+            node.val = node.next.val;
+            node=node.next;
+        }
+        node.val=node.next.val;
+        node.next=null;
+    }
+}
