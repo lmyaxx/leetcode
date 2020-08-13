@@ -1,3 +1,5 @@
+package solution601_800;
+
 public class Solution785 {
     public boolean isBipartite(int[][] graph) {
         int[] group = new int [graph.length];

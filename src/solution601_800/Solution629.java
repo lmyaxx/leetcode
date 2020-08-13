@@ -1,3 +1,5 @@
+package solution601_800;
+
 import java.util.Arrays;
 
 public class Solution629 {

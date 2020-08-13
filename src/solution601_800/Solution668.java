@@ -1,3 +1,5 @@
+package solution601_800;
+
 public class Solution668 {
     public int findKthNumber(int m, int n, int k) {
         int low = 1 , high = m * n + 1;

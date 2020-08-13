@@ -1,3 +1,5 @@
+package solution601_800;
+
 public class Solution718 {
     public int findLength(int[] A, int[] B) {
         if(A.length == 0||B.length == 0){

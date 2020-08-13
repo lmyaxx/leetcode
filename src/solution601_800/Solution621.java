@@ -1,3 +1,5 @@
+package solution601_800;
+
 import javafx.util.Pair;
 
 import java.util.*;

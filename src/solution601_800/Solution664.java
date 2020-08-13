@@ -1,3 +1,5 @@
+package solution601_800;
+
 public class Solution664 {
     public int strangePrinter(String s) {
         if("".equals(s)){

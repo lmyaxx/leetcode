@@ -1,3 +1,5 @@
+package solution601_800;
+
 public class Solution0696 {
     public int countBinarySubstrings(String s) {
         int res = 0, i =0;
