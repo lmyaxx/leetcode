@@ -1,3 +1,5 @@
+package solution1001_1200;
+
 public class Solution1014 {
     public int maxScoreSightseeingPair(int[] A) {
         int left = A[0] + 0;

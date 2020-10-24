@@ -1,3 +1,5 @@
+package solution1001_1200;
+
 import Common.TreeNode;
 
 public class Solution1028 {

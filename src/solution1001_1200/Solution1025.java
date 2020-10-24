@@ -1,3 +1,5 @@
+package solution1001_1200;
+
 public class Solution1025 {
     public boolean divisorGame(int N) {
         boolean[] dp = new boolean[N+1];
