@@ -1,3 +1,5 @@
+package solution801_1000;
+
 public class Solution1000 {
     public int mergeStones(int[] stones, int K) {
         int n = stones.length;
