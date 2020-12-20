@@ -13,32 +13,28 @@ import java.util.Set;
 public class Solution316 {
     //
     public String removeDuplicateLetters1(String s) {
-//        Map<Character,Integer> pos = new HashMap<>();
-        Set<Character> set = new HashSet<>();
-        int[] counter = new int[26];
-        for(int i=0;i<s.length();i++){
-            counter[s.charAt(i)-'a']++;
+        StringBuilder ans = new StringBuilder();
+        boolean[] visited = new boolean[26];
+        int[] count = new int[26];
+        for(char ch : s.toCharArray()){
+            count[ch - 'a'] ++;
         }
-        StringBuilder sb = new StringBuilder();
-        for(int i=0;i<s.length();i++){
-            char ch = s.charAt(i);
-            counter[ch-'a']--;
-            for(int j=sb.length()-1;j>=0;j--){
-                if(sb.charAt(j)>ch){
-                    if(counter[sb.charAt(j)-'a']>0){
-                        set.remove(sb.charAt(j));
-                        sb.deleteCharAt(j);
+        for(char ch: s.toCharArray()){
+            if(!visited[ch -'a']){
+                while(ans.length()>0 &&ans.charAt(ans.length() - 1) > ch){
+                    if(count[ans.charAt(ans.length() - 1) - 'a']>0){
+                        visited[ans.charAt(ans.length() - 1) - 'a'] = false;
+                        ans.deleteCharAt(ans.length()-1);
                     }else{
                         break;
                     }
                 }
+                visited[ch - 'a'] = true;
+                ans.append(ch);
             }
-            if(!set.contains(ch)){
-                sb.append(ch);
-                set.add(ch);
-            }
+            count[ch - 'a']--;
         }
-        return sb.toString();
+        return ans.toString();
     }
 
     public String removeDuplicateLetters(String s) {
