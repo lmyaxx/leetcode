@@ -1,3 +1,5 @@
+package solution1401_1600;
+
 public class Solution1492 {
     public int kthFactor(int n, int k) {
         for(int i = 1 ;i<=n;i++) {

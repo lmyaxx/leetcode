@@ -1,3 +1,5 @@
+package solution1401_1600;
+
 import java.util.Stack;
 
 public class Solution1504 {

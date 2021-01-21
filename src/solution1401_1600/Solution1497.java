@@ -1,3 +1,5 @@
+package solution1401_1600;
+
 import java.util.TreeMap;
 
 public class Solution1497 {

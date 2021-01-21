@@ -1,3 +1,5 @@
+package solution1401_1600;
+
 public class Solution1491 {
     public double average(int[] salary) {
         double min = Integer.MAX_VALUE, max =Integer.MIN_VALUE;

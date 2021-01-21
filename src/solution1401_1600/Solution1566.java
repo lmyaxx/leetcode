@@ -1,3 +1,5 @@
+package solution1401_1600;
+
 public class Solution1566 {
     public boolean containsPattern(int[] arr, int m, int k) {
         int len = arr.length, count = 0, total = m * k;

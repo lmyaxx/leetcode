@@ -1,3 +1,5 @@
+package solution1401_1600;
+
 public class Solution1493 {
     public int longestSubarray(int[] nums) {
         int[] left = new int [nums.length];

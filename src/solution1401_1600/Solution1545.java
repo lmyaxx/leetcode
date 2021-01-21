@@ -1,3 +1,5 @@
+package solution1401_1600;
+
 public class Solution1545 {
     public char findKthBit(int n, int k) {
         int round = 1, len = 1;

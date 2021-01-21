@@ -1,3 +1,5 @@
+package solution1401_1600;
+
 import java.util.Arrays;
 
 public class Solution1498 {

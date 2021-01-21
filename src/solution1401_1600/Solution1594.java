@@ -1,3 +1,7 @@
+package solution1401_1600;
+
+import org.junit.Test;
+
 import java.util.Arrays;
 
 public class Solution1594 {
@@ -74,5 +78,11 @@ public class Solution1594 {
             return 0;
         }
         return -1;
+    }
+
+    @Test
+    public void testArraySort(){
+        int[] nums = new int[1000];
+        System.out.println(Arrays.binarySearch(nums, 0));
     }
 }
