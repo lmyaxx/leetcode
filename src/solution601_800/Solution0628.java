@@ -22,6 +22,7 @@ public class Solution0628 {
                 lg.poll();
             }
         }
+
         int max3 = lg.poll();
         int max2 = lg.poll();
         int max1 = lg.poll();
